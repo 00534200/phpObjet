@@ -3,12 +3,13 @@ class personne {
 	protected $id;
 	protected $nom;
 	protected $prenom;
+  protected $email;
 
-
-  function __construct($id,$nom,$prenom){
+  function __construct($id,$nom,$prenom,$email){
     $this->id = $id;
     $this->nom = $nom;
     $this->prenom = $prenom;
+    $this->email = $email;
   }
 
    function getNom(){
@@ -27,11 +28,11 @@ class personne {
   }
 
   function __toString(){
-   return "id =".$this->id."nom =" .$this->nom." prenom =".$this->prenom ; 
+   return "id =".$this->id."nom =" .$this->nom." prenom =".$this->prenom. " email = ".$this->email ; 
   }
 }
 
-$perso = new personne(77,"simon","carlu");
+$perso = new personne(77,"simon","carlu","nico@hotmail.fr");
 echo $perso;
 
 
